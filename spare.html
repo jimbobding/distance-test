@@ -1,0 +1,36 @@
+<div class="container">
+		<div class="row">
+			<div class="jumbotron">
+				<h1>Distance Calculation</h1>
+			</div>
+			<div class="col">
+				<form id="distance-form">
+					<div class="form-group">
+						<label>Origin:</label>
+						<input id="from_places" class="form-control" placeholder="enter a location"/>
+						<input id="origin" type="hidden" name="origin" required />
+					</div>
+
+						<div class="form-group">
+							<label>Destination: </label>
+							<input id="to_places" class="form-control" placeholder="Enter a location"/>
+							<input id="destination" type="hidden" name="destination" required />
+                    </div>
+							<input type="submit" value="calculate" class="btn btn-primary">
+							<div id="result">
+								<ul class="list-group">
+									<li class="list-group-item d-flex justify-content-between align-items-center">
+										Distance In Mile :</li>
+									<li class="list-group-item d-flex justify-content-between align-items-center">
+										Distance is Kilo:</li>
+									<li class="list-group-item d-flex justify-content-between align-items-center">IN
+										TEXT:</li>
+									<li class="list-group-item d-flex justify-content-between align-items-center">IN
+										MINUTES:</li>
+									<li class="list-group-item d-flex justify-content-between align-items-center">FROM:
+									</li>
+									<li class="list-group-item d-flex justify-content-between align-items-center">TO:
+									</li>
+								</ul>
+							</div>
+				</form>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<title>Document</title>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+	</script>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+	</script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body onload="initMap()">
+	<h1>Distance</h1>
+
+	<div id="map"></div>
+
+
+	<div>
+		<input id="origin-input" class="controls" type="text"
+            placeholder="Enter an origin location">
+		<input id="loc_lat" type="hidden">
+		<input id="loc_long" type="hidden">
+		<input id="destination-input" class="controls" type="text"
+            placeholder="Enter a destination location">
+		<input id="latitude-destination" type="hidden">
+		<input id="longitude-destination" type="hidden">
+		<div id="mode-selector" class="controls">
+			<input type="radio" name="type" id="changemode-walking" checked="checked">
+			<label for="changemode-walking">Walking</label>
+
+			<input type="radio" name="type" id="changemode-transit">
+			<label for="changemode-transit">Transit</label>
+
+			<input type="radio" name="type" id="changemode-driving">
+			<label for="changemode-driving">Driving</label>
+		</div>
+	</div>
+	<div class="latlong-view">
+		<p><b>Latitude:</b> <span id="latitude_view"></span></p>
+		<p><b>Longitude:</b> <span id="longitude_view"></span></p>
+	</div>
+
+	<script
+		src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAoryRhsYa6ONdGj6IqldoG0mZi1hH9FaY"
+		async defer>
+	</script>
+
+	<script src="assets/js/maps.js"></script>
+	<script src="assets/js/script.js"></script>
+	<script>
+		function initMap() {
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 3,
+                center: {
+                    lat: 46.619261,
+                    lng: -33.134766
+                }
+            });  
+         }
+	</script>
+</body>
+
+</html>
