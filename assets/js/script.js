@@ -22,7 +22,7 @@ $(document).ready(function () {
     });
 });
 
-$(document).on('change', '#' + searchInput, function () {
+$(document).on('change', '#' + originInput, function () {
     document.getElementById('loc_lat').value = '';
     document.getElementById('loc_long').value = '';
 
